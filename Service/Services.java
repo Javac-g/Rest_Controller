@@ -68,5 +68,17 @@ public class Services {
 
     }
 
+    public ResponseDTO create(RequestDTO json){
+        ResponseDTO user = new ResponseDTO();
+        setEnum(user,json);
+
+        user.setName(json.getName());
+        user.setId(json.getId());
+        user.setTool(json.getTool());
+
+        log("Created",user);
+        database.add(user);
+        return user;
+    }
 
 }
