@@ -1,5 +1,6 @@
 package com.MAX.Service;
 
+import com.MAX.Controller.Car;
 import com.MAX.Controller.ResponseDTO;
 import com.fasterxml.jackson.core.io.DataOutputAsStream;
 
@@ -44,4 +45,28 @@ public class Services {
 
 
     }
+
+    public ResponseDTO setEnum(ResponseDTO response, RequestDTO request){
+
+        for (Car car:request.getCarlist()){
+            switch (car.getValue()){
+                case "A":
+                    response.setCarEnum(CarEnum.Audi);
+                    break;
+                case "B":
+                    response.setCarEnum(CarEnum.Bmw);
+                    break;
+                case "F":
+                    response.setCarEnum(CarEnum.Ferrari);
+                    break;
+            }
+        }
+        return response;
+
+
+
+
+    }
+
+
 }
