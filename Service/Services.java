@@ -92,4 +92,24 @@ public class Services {
         return null;
     }
 
+    public ResponseDTO update(Integer id, RequestDTO json){
+        ResponseDTO userTwo = read(id);
+
+        if (userTwo != null){
+
+            setEnum(userTwo,json);
+
+            userTwo.setName(json.getName());
+
+            userTwo.setId(json.getId());
+
+            userTwo.setTool(json.getTool());
+
+            log("Update",userTwo);
+
+            return userTwo;
+        }
+        return null;
+    }
+
 }
