@@ -113,17 +113,25 @@ public class Services {
     }
 
     public Integer delete(Integer id){
+
         int R = -1;
 
         for (int i = 0; i < database.size(); i++){
+
             if (database.get(i).getId().equals(id)){
+
                 log("Delete",database.get(i));
+
                 R = i;
+
             }
         }
         if (R != -1){
+
             database.remove(R);
+
             return R;
+
         }
         return null;
     }
