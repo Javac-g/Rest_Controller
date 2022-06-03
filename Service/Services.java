@@ -80,5 +80,16 @@ public class Services {
         database.add(user);
         return user;
     }
+    public ResponseDTO read(Integer id){
+        for (ResponseDTO x: database){
+            if (x.getId().equals(id)){
+
+                log("Search",x);
+
+                return x;
+            }
+        }
+        return null;
+    }
 
 }
