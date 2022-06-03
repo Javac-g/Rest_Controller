@@ -29,6 +29,20 @@ public class Controller {
         return  services.read(id);
 
     }
+    @PutMapping(value = "/u",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseDTO find(@RequestParam Integer id,@RequestBody RequestDTO user){
+
+        return  services.update(id,user);
+
+    }
+    @DeleteMapping(value = "/d",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public String delete(@RequestParam Integer id){
+
+        return services.print("Person №") + services.delete(id) + services.print(" was deleted");
+
+    }
 
 
 

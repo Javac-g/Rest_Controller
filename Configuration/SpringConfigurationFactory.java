@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Scope;
 public class SpringConfigurationFactory {
 
     @Bean(name = "Service")
-    @Scope(value = "prototype")
+
     public Services servicesB(){
 
         return new Services();
