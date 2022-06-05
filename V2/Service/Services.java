@@ -89,4 +89,25 @@ public class Services {
         return null;
 
     }
+
+    public Integer delete(Integer id){
+        int value = -1;
+
+        for (int i = 0 ; i < datalist.size();i++){
+
+            if (datalist.get(i).getId().equals(id)){
+
+                log("Deleted.txt",datalist.get(i));
+                value = i;
+
+            }
+        }
+        if (value != -1){
+            datalist.remove(value);
+            return value;
+        }
+
+        return null;
+    }
+
 }
