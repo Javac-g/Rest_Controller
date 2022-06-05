@@ -1,0 +1,9 @@
+PUT http://localhost:8080/App/u?id=1
+Content-Type: application/json
+
+{  "name" : "Alex",
+  "id": 999,
+  "tool": {"first": "ide","second": "database"},
+  "carlist" : [{"value":  "FR"},{"value": "DDDD"}]
+
+}

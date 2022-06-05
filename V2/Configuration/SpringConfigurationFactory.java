@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class SpringConfigurationFactory {
+
     @Bean(name = "Controllers")
     @Scope(value = "prototype")
     public Controllers controllersBean(){

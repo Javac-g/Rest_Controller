@@ -1,0 +1,9 @@
+POST http://localhost:8080/App/a
+Content-Type: application/json
+
+{  "name" : "Maks",
+  "id": 3,
+  "tool": {"first": "ide","second": "database"},
+  "carlist" : [{"value":  "FD"},{"value": "DDDD"}]
+
+}
