@@ -35,7 +35,7 @@ public class Services {
 
     }
 
-    public void Enum(ResponseDTO response, RequestDTO request){
+    public void setEnum(ResponseDTO response, RequestDTO request){
 
         for (Car x :request.getCarlist()){
             switch (x.getValue()){
@@ -51,5 +51,17 @@ public class Services {
             }
         }
 
+    }
+
+
+    public ResponseDTO create(RequestDTO json){
+        ResponseDTO user = new ResponseDTO();
+        user.setName(json.getName());
+        user.setId(json.getId());
+        user.setTool(json.getTool());
+        setEnum(user,json);
+        log("Created.txt",user);
+        datalist.add(user);
+        return user;
     }
 }
