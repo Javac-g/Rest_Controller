@@ -90,7 +90,7 @@ public class Services {
 
     }
 
-    public Integer delete(Integer id){
+    public Integer deleteA(Integer id){
         int value = -1;
 
         for (int i = 0 ; i < datalist.size();i++){
@@ -109,5 +109,13 @@ public class Services {
 
         return null;
     }
-
+    public Integer deleteB(Integer id){
+        for (ResponseDTO user:datalist){
+            if (user.getId().equals(id)){
+                datalist.remove(id);
+                return id;
+            }
+        }
+        return null;
+    }
 }
