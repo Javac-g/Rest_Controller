@@ -1,4 +1,4 @@
-package com.MAX.Service;
+package com.MAX.V1.Service;
 
 public enum CarEnum {
     Audi,

@@ -1,6 +1,6 @@
-package com.MAX.Controller;
+package com.MAX.V1.Controller;
 
-import com.MAX.Service.CarEnum;
+import com.MAX.V1.Service.CarEnum;
 
 public class ResponseDTO {
 

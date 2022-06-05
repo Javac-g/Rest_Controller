@@ -1,4 +1,4 @@
-package com.MAX.Controller;
+package com.MAX.V1.Controller;
 
 public class Car {
 

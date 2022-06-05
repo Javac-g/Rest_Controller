@@ -1,7 +1,7 @@
-package com.MAX.Configuration;
+package com.MAX.V1.Configuration;
 
-import com.MAX.Controller.Controller;
-import com.MAX.Service.Services;
+import com.MAX.V1.Controller.Controller;
+import com.MAX.V1.Service.Services;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
