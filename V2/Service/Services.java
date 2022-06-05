@@ -1,5 +1,6 @@
 package com.MAX.V2.Service;
 
+import com.MAX.V2.Controller.Car;
 import com.MAX.V2.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
@@ -30,6 +31,24 @@ public class Services {
 
             e.printStackTrace();
 
+        }
+
+    }
+
+    public void Enum(ResponseDTO response, RequestDTO request){
+
+        for (Car x :request.getCarlist()){
+            switch (x.getValue()){
+                case "A":
+                    response.setCarEnum(CarEnum.Aston_Martin);
+                    break;
+                case "FY":
+                    response.setCarEnum(CarEnum.Ferrary);
+                    break;
+                case "FD":
+                    response.setCarEnum(CarEnum.Ford);
+
+            }
         }
 
     }
