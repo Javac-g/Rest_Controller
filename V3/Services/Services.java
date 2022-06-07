@@ -80,4 +80,20 @@ public class Services {
         }
         return null;
     }
+    public Integer delete(Integer id){
+        int  indexToRemove = -1;
+        for (int i = 0; i < database.size(); i++){
+            if (database.get(i).getId().equals(id)){
+
+                log("Deleted.txt",database.get(i));
+                indexToRemove = i;
+
+            }
+        }
+        if (indexToRemove != -1){
+            database.remove(indexToRemove);
+            return indexToRemove;
+        }
+        return null;
+    }
 }
