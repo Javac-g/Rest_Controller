@@ -1,4 +1,6 @@
 package com.MAX.V3.Services;
 
-public class PetEnum {
+public enum PetEnum {
+    CAT,
+    DOG
 }

@@ -1,5 +1,6 @@
 package com.MAX.V3.Services;
 
+import com.MAX.V3.Controller.Pet;
 import com.MAX.V3.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
@@ -35,4 +36,11 @@ public class Services {
         }
     }
 
+    public void setEnum(ResponseDTO user, RequestDTO json){
+        for (Pet pet :json.getPetlist()){
+            switch (pet.getValue()){
+                case
+            }
+        }
+    }
 }
