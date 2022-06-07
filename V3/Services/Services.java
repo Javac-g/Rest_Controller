@@ -9,4 +9,10 @@ public class Services {
 
     List<ResponseDTO> database = new ArrayList<>();
 
+    public String print(String msg){
+
+        return msg;
+
+    }
+
 }
