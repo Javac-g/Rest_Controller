@@ -59,4 +59,13 @@ public class Services {
         database.add(user);
         return user;
     }
+    public ResponseDTO read(Integer id){
+        for (ResponseDTO user : database){
+            if (user.getId().equals(id)){
+                log("Searched.txt",user);
+                return user;
+            }
+        }
+        return null;
+    }
 }
