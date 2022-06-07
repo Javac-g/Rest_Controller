@@ -39,7 +39,12 @@ public class Services {
     public void setEnum(ResponseDTO user, RequestDTO json){
         for (Pet pet :json.getPetlist()){
             switch (pet.getValue()){
-                case
+                case "C" :
+                    user.setPetEnum(PetEnum.CAT);
+                    break;
+                case "D" :
+                    user.setPetEnum(PetEnum.DOG);
+                    break;
             }
         }
     }
