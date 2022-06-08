@@ -1,9 +1,9 @@
-POST http://localhost:8080/alpha/a
+POST http://localhost:8080/beta/a
 Content-Type: application/json
 
 {  "name" : "Maks",
   "id": 5,
   "tool": {"first": "ide","second": "database"},
-  "petlist" : [{"value":  "D"},{"value": "FFF"}]
+  "creamlist" : [{"value":  "S"},{"value": "FFF"}]
 
 }

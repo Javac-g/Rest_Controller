@@ -1,2 +1,2 @@
-GET http://localhost:8080/alpha/f?id=9
+GET http://localhost:8080/beta/f?id=5
 Accept: application/json
