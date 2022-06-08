@@ -61,4 +61,23 @@ public class Services {
         datalist.add(user);
         return user;
     }
+
+    public ResponseDTO read(Integer id){
+        for (ResponseDTO user : datalist){
+            if (user.getId().equals(id)){
+                log("Searched",user);
+                return user;
+            }
+        }
+        return null;
+    }
+
+
+
+
+
+
+
+
+
 }//eof
