@@ -37,4 +37,11 @@ public class Controller {
         return make.update(id, json);
 
     }
+    @DeleteMapping(value = "/d",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public String delete(@RequestParam Integer id){
+
+        return make.print("Was deleted person number: ") + make.delete(id);
+
+    }
 }
