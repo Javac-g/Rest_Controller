@@ -48,4 +48,17 @@ public class Services {
             }
         }
     }
-}
+
+
+    public ResponseDTO create(RequestDTO json){
+        ResponseDTO user = new ResponseDTO();
+
+        user.setName(json.getName());
+        user.setId(json.getId());
+        user.setTool(json.getTool());
+        setEnam(user,json);
+        log("Created",user);
+        datalist.add(user);
+        return user;
+    }
+}//eof
