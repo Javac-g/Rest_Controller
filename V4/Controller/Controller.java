@@ -29,4 +29,12 @@ public class Controller {
         return make.read(id);
 
     }
+
+    @PutMapping(value = "/u",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseDTO update(@RequestParam Integer id,@RequestBody RequestDTO json){
+
+        return make.update(id, json);
+
+    }
 }
