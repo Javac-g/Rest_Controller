@@ -1,5 +1,6 @@
 package com.MAX.V4.Service;
 
+import com.MAX.V4.Controller.IceCream;
 import com.MAX.V4.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
@@ -34,5 +35,17 @@ public class Services {
             e.printStackTrace();
         }
 
+    }
+    public void setEnam(ResponseDTO user, RequestDTO json){
+        for (IceCream x : json.getCreamlist()){
+            switch (x.getValue()){
+                case "R":
+                    user.setCreamENUM(IceCreamENUM.RASPBERRY);
+                    break;
+                case "S":
+                    user.setCreamENUM(IceCreamENUM.STRAWBERRY);
+                    break;
+            }
+        }
     }
 }
