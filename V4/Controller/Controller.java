@@ -3,10 +3,7 @@ package com.MAX.V4.Controller;
 import com.MAX.V4.Service.RequestDTO;
 import com.MAX.V4.Service.Services;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/beta")
 public class Controller {
@@ -24,6 +21,12 @@ public class Controller {
     public ResponseDTO add(@RequestBody RequestDTO user){
 
         return make.create(user);
+
+    }
+    @GetMapping(value = "/f", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseDTO find(@RequestParam Integer id){
+        return make.read(id);
 
     }
 }

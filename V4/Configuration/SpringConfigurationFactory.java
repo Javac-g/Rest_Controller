@@ -16,7 +16,7 @@ public class SpringConfigurationFactory {
 
     }
     @Bean(name = "Controller")
-    @Scope(value = "prototyype")
+    @Scope(value = "prototype")
     Controller controller(){
 
         return new Controller(servicesBean());
