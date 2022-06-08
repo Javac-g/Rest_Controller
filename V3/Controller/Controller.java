@@ -31,7 +31,7 @@ public class Controller {
     @DeleteMapping(value = "/d",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String deleteData(@RequestParam Integer id){
-        return services.print("Was deleted number: ") + services.delete(id);
+        return services.print("Was deleted person number: ") + services.delete(id);
     }
 
 }

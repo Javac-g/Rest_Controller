@@ -1,2 +1,0 @@
-GET http://localhost:8080/App/f?id=999
-Accept: application/json

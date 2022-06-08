@@ -1,9 +1,9 @@
-PUT http://localhost:8080/App/u?id=1
+PUT http://localhost:8080/alpha/u?id=5
 Content-Type: application/json
 
 {  "name" : "Alex",
-  "id": 999,
+  "id": 9,
   "tool": {"first": "ide","second": "database"},
-  "carlist" : [{"value":  "FR"},{"value": "DDDD"}]
+  "petlist" : [{"value":  "C"},{"value": "DDDD"}]
 
 }
